@@ -21,7 +21,6 @@ type CardLoggerOptions = {|
   cardSessionID: string,
   merchantID: $ReadOnlyArray<string>,
   merchantDomain: string,
-  sdkVersion: string,
   buyerCountry: $Values<typeof COUNTRY>,
 |};
 
@@ -36,7 +35,6 @@ export function setupCardLogger({
   locale,
   merchantID,
   merchantDomain,
-  sdkVersion,
   buyerCountry,
 }: CardLoggerOptions): ZalgoPromise<void> {
   const logger = getLogger();
@@ -47,7 +45,6 @@ export function setupCardLogger({
     clientID,
     sdkCorrelationID,
     locale,
-    sdkVersion,
     buyerCountry,
   });
 

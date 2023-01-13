@@ -12,7 +12,6 @@ export type SetupCardOptions = {|
     buyerCountry : $Values<typeof COUNTRY>,
     metadata: {|
         correlationID: string,
-        sdkVersion: string,
         spbVersion: string
     |}
 |};

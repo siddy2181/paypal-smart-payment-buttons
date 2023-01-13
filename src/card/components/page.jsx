@@ -350,7 +350,6 @@ export function setupCard({ cspNonce, facilitatorAccessToken, featureFlags, buye
         locale,
         merchantID,
         merchantDomain,
-        sdkVersion: metadata.sdkVersion,
         buyerCountry,
     })
 
