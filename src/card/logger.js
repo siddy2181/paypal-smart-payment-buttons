@@ -61,8 +61,8 @@ export function setupCardLogger({
 
   const tracking = {
     [FPTI_KEY.STATE]:                           FPTI_STATE.CARD,
-    [FPTI_KEY.TRANSITION]:                      `${type}_card_field_rendered`,
-    [FPTI_KEY.EVENT_NAME]:                      `${type}_card_field_rendered`,
+    [FPTI_KEY.TRANSITION]:                      `card_${type}_field_rendered`,
+    [FPTI_KEY.EVENT_NAME]:                      `card_${type}_field_rendered`,
   }
 
   return ZalgoPromise.hash({
