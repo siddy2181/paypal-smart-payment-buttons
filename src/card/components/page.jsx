@@ -337,6 +337,7 @@ export function setupCard({ cspNonce, facilitatorAccessToken, featureFlags, buye
         merchantID,
         merchantDomain,
         cardSessionID,
+        type,
     } = props;
 
     setupCardLogger({
@@ -351,6 +352,7 @@ export function setupCard({ cspNonce, facilitatorAccessToken, featureFlags, buye
         merchantID,
         merchantDomain,
         buyerCountry,
+        type
     })
 
     render(<Page cspNonce={ cspNonce } props={ props } featureFlags={featureFlags} />, getBody());
