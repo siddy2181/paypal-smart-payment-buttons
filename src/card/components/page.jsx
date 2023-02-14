@@ -201,7 +201,13 @@ function Page({ cspNonce, props, featureFlags } : PageProps) : mixed {
                 return submitCardFields({ facilitatorAccessToken, extraFields, featureFlags });
             },
             getState: () => {
-                return getCardFieldState()
+                const cardFieldState = getCardFieldState()
+                const { fields } = cardFieldState
+                const errors = getFieldErrors(fields)
+
+                return {...cardFieldState,
+                    isFormValid: errors.length === 0,
+                    errors}
             }
         });
     }, [ fieldValid, fieldValue, fieldFocus, fieldPotentiallyValid, cardTypes ]);
